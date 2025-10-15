@@ -1,27 +1,22 @@
-# Część II. Aplikacja mobilna 
+# Część I. Aplikacja konsolowa  
+Napisz program sortujący tablicę metodą przez wybieranie według zamieszczonej dokumentacji: 
+Sortowanie przez wybieranie- jedna z prostszych metod sortowania o złożoności O(n2). Polega na wyszukaniu elementu mającego się znaleźć na żądanej pozycji i zamianę z elementem na tej pozycji. Operacja jest wykonywana dla wszystkich indeksów sortowanej tablicy. 
  
-## Elementy aplikacji: 
-- Napis o treści: „Właściwości czcionki”. 
-- Napis o treści: „Rozmiar: ”. 
-- Suwak (SeekBar / Slider). 
-- Napis cytatu. 
-- Przycisk o treści: „>>”. 
-## Działanie aplikacji: 
-- Po przesunięciu suwaka następuje akcja: 
-  wartość aktualna suwaka jest zapisywana po napisie „Rozmiar:” 
-  rozmiar czcionki cytatu jest zmieniany na aktualną wartość suwaka (rozmiar czcionki powinien być liczbą całkowitą). 
-## Po wybraniu przycisku następuje akcja: 
- - zamieniany jest tekst w napisie cytatu. Kolejne napisy: "Dzień dobry", "Good morning", "Buenos dias". Jeżeli wyświetlony jest tekst „Buenos dias”, wybranie przycisku powoduje wyświetlenie „Dzień dobry” itd. 
-## Założenia aplikacji
-- Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np.  XAML, XML). 
-- Zastosowany typ rozkładu liniowy (Linear / Stack lub inny o tej idei). 
-- Zastosowano marginesy dla całej strony 20 
-- Wszystkie pola są rozciągnięte na szerokość strony 
-- Zastosowany kolor tła elementów: #558B2F, zgodnie z Obrazem 1a. 
-- Zastosowany kolory czcionki: czarny i biały, zgodnie z Obrazem 1a. 
-- Czcionka napisu „Właściwości czcionki” ma rozmiar największy i jest pogrubiona,  
-- Czcionka napisu „Rozmiar:” ma rozmiar średni.  
-- Suwak ma wartość maksymalną 40, jeżeli ustawienie minimum jest wymagane – ustawić wartość 0. 
-- Przycisk jest wyśrodkowany oraz jego tekst jest wyśrodkowany i pogrubiony. 
-- Teksty pojawiające się w polu napisu cytatu są zdefiniowane w kodzie jako tablica 3-elementowa.  
-- Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy stosować znaczące nazwy zmiennych i funkcji. 
+## Algorytm przedstawia się następująco: 
+- wyszukaj minimalną wartość z tablicy spośród elementów od i do końca tablicy 
+- Wstaw wartość minimalną na pozycji i 
+- Wartość z pozycji i wstaw na pozycję znalezionego elementu o minimalnej wartości 
+- Gdy zamiast wartości minimalnej wybierana będzie maksymalna, wówczas tablica będzie posortowana od największego do najmniejszego elementu. 
+ 
+## Założenia do programu: 
+- Sortowanie odbywa się malejąco, nie wykorzystuje gotowych funkcji do sortowania oraz do szukania maksimum. 
+- Sortowana jest tablica N liczb całkowitych, N jest podawane jako wartość do konstruktora, domyślnie przyjmij 50 
+- Tablica jest polem klasy. 
+- Elementy tablicy są losowane, wartości maja być liczbami całkowitymi z przedziału [0,100] . 
+- Wszystkie elementy nieposortowanej i posortowanej tablicy są wyświetlane na ekranie. 
+- Klasa zawiera co najmniej dwie metody: sortującą i szukającą wartość najwyższą. 
+- Widzialność metody szukającej ogranicza się jedynie do klasy. 
+- Metoda szukająca zwraca wartość, w zależności od przyjętej taktyki może być to wartość maksymalna lub index wartości maksymalnej. 
+- Program powinien być zapisany czytelnie, z zasadami czystego formatowania kodu, należy stosować znaczące nazwy zmiennych i funkcji. 
+
+Dokumentację aplikacji należy utworzyć zgodnie z opisem w części III treści zadania. 
